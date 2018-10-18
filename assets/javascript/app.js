@@ -1,4 +1,4 @@
-// $(document).on("ready", function () {
+$(document).ready( function () {
 
     // Initialize Firebase
     var config = {
@@ -20,7 +20,7 @@
         // Grabs user input
         var trainName = $("#train-name-input").val().trim();
         var trainDestination = $("#destination-input").val().trim();
-        var trainTime = moment($("#train-time-input").val().trim(), "MM/DD/YYYY").format("X");
+        var trainTime = moment($("#train-time-input").val().trim(), "HH:mm").format("X");
         var trainFreq = $("#frequency-input").val().trim();
 
         // Creates local "temporary" object for holding employee data
@@ -40,13 +40,13 @@
         console.log(newTrain.start);
         console.log(newTrain.rate);
 
-        alert("Employee successfully added");
+        alert("Train successfully added");
 
         // Clears all of the text-boxes
-        $("#employee-name-input").val("");
-        $("#role-input").val("");
-        $("#start-input").val("");
-        $("#rate-input").val("");
+        $("#train-name-input").val("");
+        $("#destination-input").val("");
+        $("#train-time-input").val("");
+        $("#frequency-input").val("");
     });
 
     // 3. Create Firebase event for adding employee to the database and a row in the html when a user adds an entry
@@ -66,7 +66,7 @@
         console.log(trainFreq);
     //Todo check into correct format with moment docs    
         // Prettify the employee start
-        var trainTimePretty = moment.unix(trainTime).format("HH:MM");
+        var trainTimePretty = moment.unix(trainTime).format("HH:mm");
 
         // Calculate the months worked using hardcore math
         // To calculate the months worked
@@ -81,9 +81,9 @@
         var newRow = $("<tr>").append(
             $("<td>").text(trainName),
             $("<td>").text(trainDestination),
-            $("<td>").text(trainTimePretty),
-            $("<td>").text(empMonths),
             $("<td>").text(trainFreq),
+            $("<td>").text(trainTimePretty),
+            // $("<td>").text(tminusTime),
             // $("<td>").text(empBilled)
         );
 
@@ -92,4 +92,4 @@
     });
 
 
-// });
+});
