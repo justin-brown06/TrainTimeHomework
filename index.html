@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Time</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+    <!-- JQuery Reference -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron" style="background-color: rgb(0, 75, 4); color: white">
+            <h1 class="text-center">What Train Will We Think Of Next?</h1>
+            <h3 class="text-center">A Comprehensive List of the World's most made up Train Schedules</h3>
+        </div>
+    </div>
+
+    <!-- Added Trains -->
+    <div class="row">
+        <div class="container">
+            <div class="col -12 col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header">Train Schedule</div>
+                    <div class="card-body">
+                        <table class="table table-sm table-hover" id='train-table'>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name That Train!</th>
+                                    <th scope="col">End of The Adventure</th>
+                                    <th scope="col">Refresh Time</th>
+                                    <th scope="col">Launch Time!</th>
+                                    <th scope="col">T-Minus To Launch</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Train  -->
+    <div class="row">
+        <div class="container">
+            <div class="col-12 col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header">Add Train</div>
+                    <div class="card-body">
+
+                        <!-- Entry Form -->
+                        <form>
+                            <div class="form-group">
+                                <label for="train-name-input">Train Name</label>
+                                <input class="form-control" id="train-name-input" placeholder="Choo Choo!" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="destination-input">Destination</label>
+                                <input class="form-control" id="destination-input" placeholder="Platform 9 3/4" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="train-time-input">First Train Time (24-hr Format)</label>
+                                <input class="form-control" id="train-time-input" placeholder="18:30" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="frequency-input">Frequency (In Minutes)</label>
+                                <input class="form-control" id="frequency-input" placeholder="42" type="text">
+                            </div>
+                            <button class="btn btn-dark float-right" id="add-train-btn">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AJAX Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Moment.js Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+    <!-- Local JavaScript -->
+    <script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
